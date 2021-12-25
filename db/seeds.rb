@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+all_streets = JSON.parse(File.read(Rails.root.join('lib', 'seeds', 'streets-if.json')))
+all_streets.each do |street|
+  Street.create(
+    name: street['name']
+  )
+end
