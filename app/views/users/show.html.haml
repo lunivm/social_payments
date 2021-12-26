@@ -1,17 +1,14 @@
 %p#notice= notice
 
 %p
-  %b Login:
-  = @user.login
-%p
-  %b Full name:
-  = @user.full_name
-%p
   %b Password:
   = @user.password
 %p
   %b Email:
   = @user.email
+%p
+  %b Full name:
+  = @user.full_name
 
 = link_to 'Edit', edit_user_path(@user)
 \|
