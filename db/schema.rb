@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_25_141607) do
+ActiveRecord::Schema.define(version: 2021_12_26_124230) do
+
+  create_table "banks", force: :cascade do |t|
+    t.string "name"
+    t.string "edrpou"
+    t.string "mfo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "streets", force: :cascade do |t|
     t.string "name"

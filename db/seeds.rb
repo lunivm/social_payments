@@ -12,3 +12,12 @@ all_streets.each do |street|
     name: street['name']
   )
 end
+
+all_banks = JSON.parse(File.read(Rails.root.join('lib', 'seeds', 'nbu_bank_info.json')))
+all_banks.each do |bank|
+  Bank.create(
+    name: bank['SHORTNAME'],
+    edrpou: bank['KOD_EDRPOU'],
+    mfo: bank['MFO']
+  ) if bank['TYP'] == "0"
+end
