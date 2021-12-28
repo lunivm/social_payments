@@ -1,0 +1,28 @@
+= form_for @consumer do |f|
+  - if @consumer.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@consumer.errors.count, "error")} prohibited this consumer from being saved:"
+      %ul
+        - @consumer.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :fullName
+    = f.text_field :fullName
+  .field
+    = f.label :passportNumber
+    = f.text_field :passportNumber
+  .field
+    = f.label :identityCode
+    = f.text_field :identityCode
+  .field
+    = f.label :house
+    = f.text_field :house
+  .field
+    = f.label :houseSection
+    = f.text_field :houseSection
+  .field
+    = f.label :apartment
+    = f.text_field :apartment
+  .actions
+    = f.submit 'Save'

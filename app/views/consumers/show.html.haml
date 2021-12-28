@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Fullname:
+  = @consumer.fullName
+%p
+  %b Passportnumber:
+  = @consumer.passportNumber
+%p
+  %b Identitycode:
+  = @consumer.identityCode
+%p
+  %b House:
+  = @consumer.house
+%p
+  %b Housesection:
+  = @consumer.houseSection
+%p
+  %b Apartment:
+  = @consumer.apartment
+
+= link_to 'Edit', edit_consumer_path(@consumer)
+\|
+= link_to 'Back', consumers_path
