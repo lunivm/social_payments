@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Consumer:
+  = @consumer_account.consumer.full_name
+%p
+  %b Bank:
+  = @consumer_account.bank.name
+%p
+  %b Account:
+  = @consumer_account.account
+
+= link_to 'Edit', edit_consumer_account_path(@consumer_account)
+\|
+= link_to 'Back', consumer_accounts_path

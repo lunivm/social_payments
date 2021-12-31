@@ -1,0 +1,25 @@
+%h1 Listing consumer_accounts
+
+%table
+  %thead
+    %tr
+      %th Consumer
+      %th Bank
+      %th Account
+      %th
+      %th
+      %th
+
+  %tbody
+    - @consumer_accounts.each do |consumer_account|
+      %tr
+        %td= consumer_account.consumer.full_name
+        %td= consumer_account.bank.name
+        %td= consumer_account.account
+        %td= link_to 'Show', consumer_account
+        %td= link_to 'Edit', edit_consumer_account_path(consumer_account)
+        %td= link_to 'Destroy', consumer_account, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Consumer account', new_consumer_account_path

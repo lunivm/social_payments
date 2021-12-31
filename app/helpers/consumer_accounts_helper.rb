@@ -1,0 +1,2 @@
+module ConsumerAccountsHelper
+end

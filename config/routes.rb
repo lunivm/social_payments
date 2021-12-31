@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :consumer_accounts
   resources :banks
   resources :streets
   resources :consumers
