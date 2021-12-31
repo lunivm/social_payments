@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_31_104442) do
+ActiveRecord::Schema.define(version: 2021_12_31_104923) do
 
   create_table "banks", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2021_12_31_104442) do
     t.string "apartment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "street_id", null: false
+    t.index ["street_id"], name: "index_consumers_on_street_id"
   end
 
 # Could not dump table "sqlite_stat1" because of following StandardError
@@ -51,4 +53,5 @@ ActiveRecord::Schema.define(version: 2021_12_31_104442) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "consumers", "streets"
 end

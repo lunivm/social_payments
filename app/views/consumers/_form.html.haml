@@ -24,5 +24,8 @@
   .field
     = f.label :apartment
     = f.text_field :apartment
+  .street
+    = f.label :street_id, 'Вулиця'
+    = f.select :street_id, @streets
   .actions
     = f.submit 'Save'

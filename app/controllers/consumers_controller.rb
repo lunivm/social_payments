@@ -13,6 +13,7 @@ class ConsumersController < ApplicationController
   # GET /consumers/new
   def new
     @consumer = Consumer.new
+    @streets = Street.all.map { |i| [i.name, i.id] }
   end
 
   # GET /consumers/1/edit
@@ -65,6 +66,6 @@ class ConsumersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def consumer_params
-      params.require(:consumer).permit(:full_name, :passport_number, :identity_code, :house, :house_section, :apartment)
+      params.require(:consumer).permit(:full_name, :passport_number, :identity_code, :house, :house_section, :apartment, :street_id)
     end
 end
