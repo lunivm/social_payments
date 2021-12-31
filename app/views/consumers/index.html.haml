@@ -3,11 +3,11 @@
 %table
   %thead
     %tr
-      %th Fullname
-      %th Passportnumber
-      %th Identitycode
+      %th Full name
+      %th Passport number
+      %th Identity code
       %th House
-      %th Housesection
+      %th House section
       %th Apartment
       %th
       %th
@@ -16,11 +16,11 @@
   %tbody
     - @consumers.each do |consumer|
       %tr
-        %td= consumer.fullName
-        %td= consumer.passportNumber
-        %td= consumer.identityCode
+        %td= consumer.full_name
+        %td= consumer.passport_number
+        %td= consumer.identity_code
         %td= consumer.house
-        %td= consumer.houseSection
+        %td= consumer.house_section
         %td= consumer.apartment
         %td= link_to 'Show', consumer
         %td= link_to 'Edit', edit_consumer_path(consumer)

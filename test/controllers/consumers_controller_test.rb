@@ -17,7 +17,7 @@ class ConsumersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create consumer" do
     assert_difference("Consumer.count") do
-      post consumers_url, params: { consumer: { apartment: @consumer.apartment, fullName: @consumer.fullName, house: @consumer.house, houseSection: @consumer.houseSection, identityCode: @consumer.identityCode, passportNumber: @consumer.passportNumber } }
+      post consumers_url, params: { consumer: { apartment: @consumer.apartment, full_name: @consumer.full_name, house: @consumer.house, house_section: @consumer.house_section, identity_code: @consumer.identity_code, passport_number: @consumer.passport_number } }
     end
 
     assert_redirected_to consumer_url(Consumer.last)
@@ -34,7 +34,7 @@ class ConsumersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update consumer" do
-    patch consumer_url(@consumer), params: { consumer: { apartment: @consumer.apartment, fullName: @consumer.fullName, house: @consumer.house, houseSection: @consumer.houseSection, identityCode: @consumer.identityCode, passportNumber: @consumer.passportNumber } }
+    patch consumer_url(@consumer), params: { consumer: { apartment: @consumer.apartment, full_name: @consumer.full_name, house: @consumer.house, house_section: @consumer.house_section, identity_code: @consumer.identity_code, passport_number: @consumer.passport_number } }
     assert_redirected_to consumer_url(@consumer)
   end
 

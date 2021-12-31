@@ -65,6 +65,6 @@ class ConsumersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def consumer_params
-      params.require(:consumer).permit(:fullName, :passportNumber, :identityCode, :house, :houseSection, :apartment)
+      params.require(:consumer).permit(:full_name, :passport_number, :identity_code, :house, :house_section, :apartment)
     end
 end

@@ -1,11 +1,11 @@
 class CreateConsumers < ActiveRecord::Migration[7.0]
   def change
     create_table :consumers do |t|
-      t.string :fullName
-      t.string :passportNumber
-      t.string :identityCode
+      t.string :full_name
+      t.string :passport_number
+      t.string :identity_code
       t.string :house
-      t.string :houseSection
+      t.string :house_section
       t.string :apartment
 
       t.timestamps

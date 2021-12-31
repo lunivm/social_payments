@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_28_100052) do
+ActiveRecord::Schema.define(version: 2021_12_31_104442) do
 
   create_table "banks", force: :cascade do |t|
     t.string "name"
@@ -21,11 +21,11 @@ ActiveRecord::Schema.define(version: 2021_12_28_100052) do
   end
 
   create_table "consumers", force: :cascade do |t|
-    t.string "fullName"
-    t.string "passportNumber"
-    t.string "identityCode"
+    t.string "full_name"
+    t.string "passport_number"
+    t.string "identity_code"
     t.string "house"
-    t.string "houseSection"
+    t.string "house_section"
     t.string "apartment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

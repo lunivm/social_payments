@@ -1,17 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  fullName: MyString
-  passportNumber: MyString
-  identityCode: MyString
+  full_name: MyString
+  passport_number: MyString
+  identity_code: MyString
   house: MyString
-  houseSection: MyString
+  house_section: MyString
   apartment: MyString
 
 two:
-  fullName: MyString
-  passportNumber: MyString
-  identityCode: MyString
+  full_name: MyString
+  passport_number: MyString
+  identity_code: MyString
   house: MyString
-  houseSection: MyString
+  house_section: MyString
   apartment: MyString

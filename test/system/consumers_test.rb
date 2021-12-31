@@ -15,11 +15,11 @@ class ConsumersTest < ApplicationSystemTestCase
     click_on "New consumer"
 
     fill_in "Apartment", with: @consumer.apartment
-    fill_in "Fullname", with: @consumer.fullName
+    fill_in "Full name", with: @consumer.full_name
     fill_in "House", with: @consumer.house
-    fill_in "Housesection", with: @consumer.houseSection
-    fill_in "Identitycode", with: @consumer.identityCode
-    fill_in "Passportnumber", with: @consumer.passportNumber
+    fill_in "House section", with: @consumer.house_section
+    fill_in "Identity code", with: @consumer.identity_code
+    fill_in "Passport number", with: @consumer.passport_number
     click_on "Create Consumer"
 
     assert_text "Consumer was successfully created"
@@ -31,11 +31,11 @@ class ConsumersTest < ApplicationSystemTestCase
     click_on "Edit this consumer", match: :first
 
     fill_in "Apartment", with: @consumer.apartment
-    fill_in "Fullname", with: @consumer.fullName
+    fill_in "Full name", with: @consumer.full_name
     fill_in "House", with: @consumer.house
-    fill_in "Housesection", with: @consumer.houseSection
-    fill_in "Identitycode", with: @consumer.identityCode
-    fill_in "Passportnumber", with: @consumer.passportNumber
+    fill_in "House section", with: @consumer.house_section
+    fill_in "Identity code", with: @consumer.identity_code
+    fill_in "Passport number", with: @consumer.passport_number
     click_on "Update Consumer"
 
     assert_text "Consumer was successfully updated"
