@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-12-31
+  paid: false
+  report_number: MyString
+  description: MyText
+  sum: 1.5
+  code_kfk: MyString
+  code_kek: MyString
+
+two:
+  date: 2021-12-31
+  paid: false
+  report_number: MyString
+  description: MyText
+  sum: 1.5
+  code_kfk: MyString
+  code_kek: MyString

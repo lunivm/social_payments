@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @payment.date
+%p
+  %b Paid:
+  = @payment.paid
+%p
+  %b Report number:
+  = @payment.report_number
+%p
+  %b Description:
+  = @payment.description
+%p
+  %b Sum:
+  = @payment.sum
+%p
+  %b Code kfk:
+  = @payment.code_kfk
+%p
+  %b Code kek:
+  = @payment.code_kek
+
+= link_to 'Edit', edit_payment_path(@payment)
+\|
+= link_to 'Back', payments_path

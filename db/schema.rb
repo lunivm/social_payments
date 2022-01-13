@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_31_121118) do
+ActiveRecord::Schema.define(version: 2021_12_31_130450) do
 
   create_table "banks", force: :cascade do |t|
     t.string "name"
@@ -43,11 +43,17 @@ ActiveRecord::Schema.define(version: 2021_12_31_121118) do
     t.index ["street_id"], name: "index_consumers_on_street_id"
   end
 
-# Could not dump table "sqlite_stat1" because of following StandardError
-#   Unknown type '' for column 'tbl'
-
-# Could not dump table "sqlite_stat4" because of following StandardError
-#   Unknown type '' for column 'tbl'
+  create_table "payments", force: :cascade do |t|
+    t.date "date"
+    t.boolean "paid"
+    t.string "report_number"
+    t.text "description"
+    t.float "sum"
+    t.string "code_kfk"
+    t.string "code_kek"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "streets", force: :cascade do |t|
     t.string "name"
